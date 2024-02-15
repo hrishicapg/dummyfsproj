@@ -3,6 +3,7 @@
 name: Build and Deployment
 
 on:
+  push:
 
 env:
   DOCKER_FILE: "Dockerfile"
