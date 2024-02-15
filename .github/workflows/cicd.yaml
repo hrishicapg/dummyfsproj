@@ -83,4 +83,5 @@ jobs:
 
       - name: Check logs
         run: |
-          docker logs cont > cat
+          docker exec -it cont bash
+          ls /app
