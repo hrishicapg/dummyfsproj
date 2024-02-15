@@ -94,3 +94,7 @@ jobs:
         # Add these steps back when we are capturing unit tests and code coverage
         # docker run --name test_container buildimage echo test
         # docker cp test_container:/usr/src/app/angular-app/test ./test f
+
+      - name: Run the Docker container
+        run: |
+          docker run --name cont -d buildimage
