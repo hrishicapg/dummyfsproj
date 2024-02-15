@@ -19,7 +19,6 @@ env:
 jobs:
   config:
     runs-on:
-      - self-hosted
     outputs:
       deployment_environment: ${{ env.DEPLOYMENT_ENVIRONMENT }}
       release_suffix: ${{ env.RELEASE_SUFFIX }}
@@ -60,7 +59,6 @@ jobs:
     # needs: [lint]
     timeout-minutes: 20
     runs-on:
-      - self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

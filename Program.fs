@@ -10,7 +10,7 @@ open Newtonsoft.Json.Linq
 
 
 [<Literal>]
-let yamlFile = "/app/DummyFsProj/src/logix-ai.yml"
+let yamlFile = "/app/logix-ai.yml"
 
 let logixAIFile = new FileStream("./default-project.yml", FileMode.Open, FileAccess.Read)
 let stream = new StreamReader(logixAIFile)
