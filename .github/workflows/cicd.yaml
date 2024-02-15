@@ -77,24 +77,6 @@ jobs:
         # docker run --name test_container buildimage echo test
         # docker cp test_container:/usr/src/app/angular-app/test ./test
 
-      # Build the Docker image tagged for pre-release(nonprod).
-      - name: Build the Docker image for pre-release
-        if: github.ref == 'refs/heads/release'
-        run: |
-          docker build . --file ${{ env.DOCKER_FILE }} --tag buildimage --build-arg github_token=${{ secrets.READ_GITHUB_PACKAGES_PAT }}
-        # Add these steps back when we are capturing unit tests and code coverage
-        # docker run --name test_container buildimage echo test
-        # docker cp test_container:/usr/src/app/angular-app/test ./test
-
-      # Build the Docker image tagged for release(production).
-      - name: Build the Docker image for release.
-        if: github.ref == 'refs/heads/master'
-        run: |
-          docker build . --file ${{ env.DOCKER_FILE }} --tag buildimage --build-arg github_token=${{ secrets.READ_GITHUB_PACKAGES_PAT }}
-        # Add these steps back when we are capturing unit tests and code coverage
-        # docker run --name test_container buildimage echo test
-        # docker cp test_container:/usr/src/app/angular-app/test ./test f
-
       - name: Run the Docker container
         run: |
-          docker run --name cont -d buildimage
+          docker run -it --name cont -d buildimage
