@@ -1,0 +1,69 @@
+## Follow the repository's Code Tour for configuration.
+
+name: Build and Deployment
+
+on:
+
+env:
+  DOCKER_FILE: "Dockerfile"
+  CONTAINER_PORT: 5000
+  KUBERNETES_NAMESPACE: eaas
+  KUBERNETES_APP_NAME: eaas-api
+  CONTAINER_REGISTRY_NAME: ghcr.io
+  HELM_CHART_RELATIVE_LOCATION: gitops/chart
+  TERRAFORM_TEMPLATES_RELATIVE_LOCATION: gitops/terraform
+  APPLICATION_PQDN: eaas-api # as in test.lemans-sandbox.rockwellautomation.com
+  HELM_TIMEOUT: 600s
+
+jobs:
+  build:
+    # needs: [lint]
+    timeout-minutes: 20
+    runs-on:
+      - self-hosted
+    outputs:
+      build_version: ${{ env.BUILD_VERSION }}
+    concurrency:
+      group: build-${{ needs.config.outputs.deployment_environment || github.sha }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          # Fetches entire history, so we can analyze commits since last tag.
+          fetch-depth: 0
+
+      # Build the Docker image tagged for develop(sandbox)
+      - name: Build the Docker image for sandbox
+        if: github.ref != 'refs/heads/master' && github.ref != 'refs/heads/release'
+        run: |
+          echo -n "${{ secrets.EDGE_MANAGER_CONFIG_READ_DEPLOY_KEY }}" > id_rsa
+          docker build . --file ${{ env.DOCKER_FILE }} --tag buildimage
+        # Add these steps back when we are capturing unit tests and code coverage
+        # docker run --name test_container buildimage echo test
+        # docker cp test_container:/usr/src/app/angular-app/test ./test
+
+      # Build the Docker image tagged for pre-release(nonprod).
+      - name: Build the Docker image for pre-release
+        if: github.ref == 'refs/heads/release'
+        run: |
+          docker build . --file ${{ env.DOCKER_FILE }} --tag buildimage --build-arg github_token=${{ secrets.READ_GITHUB_PACKAGES_PAT }}
+        # Add these steps back when we are capturing unit tests and code coverage
+        # docker run --name test_container buildimage echo test
+        # docker cp test_container:/usr/src/app/angular-app/test ./test
+
+      # Build the Docker image tagged for release(production).
+      - name: Build the Docker image for release.
+        if: github.ref == 'refs/heads/master'
+        run: |
+          docker build . --file ${{ env.DOCKER_FILE }} --tag buildimage --build-arg github_token=${{ secrets.READ_GITHUB_PACKAGES_PAT }}
+        # Add these steps back when we are capturing unit tests and code coverage
+        # docker run --name test_container buildimage echo test
+        # docker cp test_container:/usr/src/app/angular-app/test ./test
+
+      # If the branch has an environment, then we're creating a release...
+      - uses: ./.github/actions/common-outputs
+        if: github.ref == 'refs/heads/main' ||
+              startsWith(github.ref, 'refs/heads/hotfix/') ||
+              startsWith(github.ref, 'refs/heads/release') ||
+              github.ref == 'refs/heads/develop'
+        id: common
