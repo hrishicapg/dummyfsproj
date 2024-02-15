@@ -1,0 +1,6639 @@
+---
+name: string
+title: string
+description: string
+revision:
+  prev: string
+  curr: string
+  createdAt: {}
+  createdBy: string
+  updatedAt: {}
+  updatedBy: string
+type: TAG_TYPE_UNSPECIFIED
+appPolicy:
+  name: string
+  title: string
+  description: string
+  type: POLICY_TYPE_UNSPECIFIED
+  status: POLICY_STATUS_UNSPECIFIED
+  revision:
+    prev: string
+    curr: string
+    createdAt: {}
+    createdBy: string
+    updatedAt: {}
+    updatedBy: string
+  attr:
+    additionalProp1: string
+    additionalProp2: string
+    additionalProp3: string
+  appPolicy:
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  azurePolicy:
+    appId: string
+    appPassword: string
+    tenantId: string
+    encryptedSecrets:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    cryptoKey: string
+    azureResourceAndServices:
+      resourceGroup:
+      - name: string
+        region: string
+        subscriptionId: string
+      iotHubService:
+      - serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+      dpsService:
+        serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+        enrollment:
+          attachedIotHubsName:
+          - string
+          enableIotEdgeDevice: true
+          mechanism: ENROLLMENT_MECHANISM_UNSPECIFIED
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+          allocationPolicy: ALLOCATION_POLICY_UNSPECIFIED
+          symmetricKeyEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualSymmetricKeyEnrollment:
+              registrationId: string
+            groupSymmetricKeyEnrollment:
+              groupName: string
+          certificateEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualCertificateEnrollment: {}
+            groupCertificateEnrollment:
+              groupName: string
+          tpmEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+    customDeploymentManaged: true
+    certificate:
+      cert: string
+      pvtKey: string
+      publicKey: string
+      passPhrase: string
+      exportable: true
+      reuseKey: true
+      encryptedSecrets:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      cryptoKey: string
+      publicKeyAlgorithm: string
+      rsaEcryption:
+        rsaBits: string
+      ecdsaEncryption:
+        curve: string
+      validFrom: '2024-01-17T09:51:51.408Z'
+      validTill: '2024-01-17T09:51:51.408Z'
+      sanValues:
+        hosts:
+        - string
+        emaildIds:
+        - string
+        uris:
+        - string
+        ips:
+        - string
+        dns:
+        - string
+        upns:
+        - string
+      subject:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      issuer:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      serialNumber: string
+      basicContraintsValid: true
+      keyUsage: 0
+      extendedKeyUsage:
+      - string
+      signatureAlgorithm: string
+  modulePolicy:
+    labels:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    priority: 0
+    targetCondition: string
+    metrics:
+      queries:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      results:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+    Etag: string
+    routes:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    targetConditionNew:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    azureEdgeAgent:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    azureEdgeHub:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  attestationPolicy:
+    type: ATTEST_POLICY_TYPE_UNSPECIFIED
+  networkPolicy:
+    netInstanceConfig:
+    - name: string
+      title: string
+      description: string
+      revision:
+        prev: string
+        curr: string
+        createdAt: {}
+        createdBy: string
+        updatedAt: {}
+        updatedBy: string
+      projectId: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      clusterID: string
+      deviceId: string
+      port: string
+      portTags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      kind: NETWORK_INSTANCE_KIND_UNSPECIFIED
+      dhcp: true
+      type: NETWORK_INSTANCE_DHCP_TYPE_UNSPECIFIED
+      ip:
+        subnet: string
+        mask: string
+        gateway: string
+        domain: string
+        ntp: string
+        dns:
+        - string
+        dhcpRange:
+          start: string
+          end: string
+      dnsList:
+      - hostname: string
+        addrs:
+        - string
+      oconfig: string
+      lisp:
+        lispiid: 0
+        allocate: true
+        exportprivate: true
+        allocationprefix: string
+        allocationprefixlen: 0
+        sp:
+        - type: SPTYPE_INVALIDSRV
+          NameOrIp: string
+          Credential: string
+      opaque:
+        type: OPAQUE_CONFIG_TYPE_UNSPECIFIED
+        oconfig: string
+        lisp:
+          lispiid: 0
+          allocate: true
+          exportprivate: true
+          allocationprefix: string
+          allocationprefixlen: 0
+          sp:
+          - type: SPTYPE_INVALIDSRV
+            NameOrIp: string
+            Credential: string
+      deviceDefault: true
+      networkPolicyId: string
+  clusterPolicy:
+    type: CLUSTER_TYPE_UNSPECIFIED
+    appPolicyID: string
+    networkPolicyID: string
+    clusterConfig:
+      minNodesRequired: 0
+  edgeviewPolicy:
+    edgeviewcfg:
+      jwtInfo:
+        dispUrl: string
+        allowSec: 0
+        expireSec: string
+        numInst: 0
+        encrypt: true
+      token: string
+      devPolicy:
+        allowDev: true
+      appPolicy:
+        allowApp: true
+      extPolicy:
+        allowExt: true
+      generationId: 0
+    edgeviewAllow: true
+    accessAllowChange: true
+    maxExpireSec: 0
+    maxInst: 0
+  localOperatorConsolePolicy:
+    locURL: string
+  configurationLockPolicy:
+    configLock: CONFIGURATION_LOCK_UNSPECIFIED
+  statusMessage: string
+cloudPolicy:
+  name: string
+  title: string
+  description: string
+  type: POLICY_TYPE_UNSPECIFIED
+  status: POLICY_STATUS_UNSPECIFIED
+  revision:
+    prev: string
+    curr: string
+    createdAt: {}
+    createdBy: string
+    updatedAt: {}
+    updatedBy: string
+  attr:
+    additionalProp1: string
+    additionalProp2: string
+    additionalProp3: string
+  appPolicy:
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  azurePolicy:
+    appId: string
+    appPassword: string
+    tenantId: string
+    encryptedSecrets:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    cryptoKey: string
+    azureResourceAndServices:
+      resourceGroup:
+      - name: string
+        region: string
+        subscriptionId: string
+      iotHubService:
+      - serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+      dpsService:
+        serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+        enrollment:
+          attachedIotHubsName:
+          - string
+          enableIotEdgeDevice: true
+          mechanism: ENROLLMENT_MECHANISM_UNSPECIFIED
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+          allocationPolicy: ALLOCATION_POLICY_UNSPECIFIED
+          symmetricKeyEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualSymmetricKeyEnrollment:
+              registrationId: string
+            groupSymmetricKeyEnrollment:
+              groupName: string
+          certificateEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualCertificateEnrollment: {}
+            groupCertificateEnrollment:
+              groupName: string
+          tpmEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+    customDeploymentManaged: true
+    certificate:
+      cert: string
+      pvtKey: string
+      publicKey: string
+      passPhrase: string
+      exportable: true
+      reuseKey: true
+      encryptedSecrets:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      cryptoKey: string
+      publicKeyAlgorithm: string
+      rsaEcryption:
+        rsaBits: string
+      ecdsaEncryption:
+        curve: string
+      validFrom: '2024-01-17T09:51:51.409Z'
+      validTill: '2024-01-17T09:51:51.410Z'
+      sanValues:
+        hosts:
+        - string
+        emaildIds:
+        - string
+        uris:
+        - string
+        ips:
+        - string
+        dns:
+        - string
+        upns:
+        - string
+      subject:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      issuer:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      serialNumber: string
+      basicContraintsValid: true
+      keyUsage: 0
+      extendedKeyUsage:
+      - string
+      signatureAlgorithm: string
+  modulePolicy:
+    labels:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    priority: 0
+    targetCondition: string
+    metrics:
+      queries:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      results:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+    Etag: string
+    routes:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    targetConditionNew:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    azureEdgeAgent:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    azureEdgeHub:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  attestationPolicy:
+    type: ATTEST_POLICY_TYPE_UNSPECIFIED
+  networkPolicy:
+    netInstanceConfig:
+    - name: string
+      title: string
+      description: string
+      revision:
+        prev: string
+        curr: string
+        createdAt: {}
+        createdBy: string
+        updatedAt: {}
+        updatedBy: string
+      projectId: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      clusterID: string
+      deviceId: string
+      port: string
+      portTags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      kind: NETWORK_INSTANCE_KIND_UNSPECIFIED
+      dhcp: true
+      type: NETWORK_INSTANCE_DHCP_TYPE_UNSPECIFIED
+      ip:
+        subnet: string
+        mask: string
+        gateway: string
+        domain: string
+        ntp: string
+        dns:
+        - string
+        dhcpRange:
+          start: string
+          end: string
+      dnsList:
+      - hostname: string
+        addrs:
+        - string
+      oconfig: string
+      lisp:
+        lispiid: 0
+        allocate: true
+        exportprivate: true
+        allocationprefix: string
+        allocationprefixlen: 0
+        sp:
+        - type: SPTYPE_INVALIDSRV
+          NameOrIp: string
+          Credential: string
+      opaque:
+        type: OPAQUE_CONFIG_TYPE_UNSPECIFIED
+        oconfig: string
+        lisp:
+          lispiid: 0
+          allocate: true
+          exportprivate: true
+          allocationprefix: string
+          allocationprefixlen: 0
+          sp:
+          - type: SPTYPE_INVALIDSRV
+            NameOrIp: string
+            Credential: string
+      deviceDefault: true
+      networkPolicyId: string
+  clusterPolicy:
+    type: CLUSTER_TYPE_UNSPECIFIED
+    appPolicyID: string
+    networkPolicyID: string
+    clusterConfig:
+      minNodesRequired: 0
+  edgeviewPolicy:
+    edgeviewcfg:
+      jwtInfo:
+        dispUrl: string
+        allowSec: 0
+        expireSec: string
+        numInst: 0
+        encrypt: true
+      token: string
+      devPolicy:
+        allowDev: true
+      appPolicy:
+        allowApp: true
+      extPolicy:
+        allowExt: true
+      generationId: 0
+    edgeviewAllow: true
+    accessAllowChange: true
+    maxExpireSec: 0
+    maxInst: 0
+  localOperatorConsolePolicy:
+    locURL: string
+  configurationLockPolicy:
+    configLock: CONFIGURATION_LOCK_UNSPECIFIED
+  statusMessage: string
+attestationPolicy:
+  name: string
+  title: string
+  description: string
+  type: POLICY_TYPE_UNSPECIFIED
+  status: POLICY_STATUS_UNSPECIFIED
+  revision:
+    prev: string
+    curr: string
+    createdAt: {}
+    createdBy: string
+    updatedAt: {}
+    updatedBy: string
+  attr:
+    additionalProp1: string
+    additionalProp2: string
+    additionalProp3: string
+  appPolicy:
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  azurePolicy:
+    appId: string
+    appPassword: string
+    tenantId: string
+    encryptedSecrets:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    cryptoKey: string
+    azureResourceAndServices:
+      resourceGroup:
+      - name: string
+        region: string
+        subscriptionId: string
+      iotHubService:
+      - serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+      dpsService:
+        serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+        enrollment:
+          attachedIotHubsName:
+          - string
+          enableIotEdgeDevice: true
+          mechanism: ENROLLMENT_MECHANISM_UNSPECIFIED
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+          allocationPolicy: ALLOCATION_POLICY_UNSPECIFIED
+          symmetricKeyEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualSymmetricKeyEnrollment:
+              registrationId: string
+            groupSymmetricKeyEnrollment:
+              groupName: string
+          certificateEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualCertificateEnrollment: {}
+            groupCertificateEnrollment:
+              groupName: string
+          tpmEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+    customDeploymentManaged: true
+    certificate:
+      cert: string
+      pvtKey: string
+      publicKey: string
+      passPhrase: string
+      exportable: true
+      reuseKey: true
+      encryptedSecrets:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      cryptoKey: string
+      publicKeyAlgorithm: string
+      rsaEcryption:
+        rsaBits: string
+      ecdsaEncryption:
+        curve: string
+      validFrom: '2024-01-17T09:51:51.411Z'
+      validTill: '2024-01-17T09:51:51.411Z'
+      sanValues:
+        hosts:
+        - string
+        emaildIds:
+        - string
+        uris:
+        - string
+        ips:
+        - string
+        dns:
+        - string
+        upns:
+        - string
+      subject:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      issuer:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      serialNumber: string
+      basicContraintsValid: true
+      keyUsage: 0
+      extendedKeyUsage:
+      - string
+      signatureAlgorithm: string
+  modulePolicy:
+    labels:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    priority: 0
+    targetCondition: string
+    metrics:
+      queries:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      results:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+    Etag: string
+    routes:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    targetConditionNew:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    azureEdgeAgent:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    azureEdgeHub:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  attestationPolicy:
+    type: ATTEST_POLICY_TYPE_UNSPECIFIED
+  networkPolicy:
+    netInstanceConfig:
+    - name: string
+      title: string
+      description: string
+      revision:
+        prev: string
+        curr: string
+        createdAt: {}
+        createdBy: string
+        updatedAt: {}
+        updatedBy: string
+      projectId: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      clusterID: string
+      deviceId: string
+      port: string
+      portTags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      kind: NETWORK_INSTANCE_KIND_UNSPECIFIED
+      dhcp: true
+      type: NETWORK_INSTANCE_DHCP_TYPE_UNSPECIFIED
+      ip:
+        subnet: string
+        mask: string
+        gateway: string
+        domain: string
+        ntp: string
+        dns:
+        - string
+        dhcpRange:
+          start: string
+          end: string
+      dnsList:
+      - hostname: string
+        addrs:
+        - string
+      oconfig: string
+      lisp:
+        lispiid: 0
+        allocate: true
+        exportprivate: true
+        allocationprefix: string
+        allocationprefixlen: 0
+        sp:
+        - type: SPTYPE_INVALIDSRV
+          NameOrIp: string
+          Credential: string
+      opaque:
+        type: OPAQUE_CONFIG_TYPE_UNSPECIFIED
+        oconfig: string
+        lisp:
+          lispiid: 0
+          allocate: true
+          exportprivate: true
+          allocationprefix: string
+          allocationprefixlen: 0
+          sp:
+          - type: SPTYPE_INVALIDSRV
+            NameOrIp: string
+            Credential: string
+      deviceDefault: true
+      networkPolicyId: string
+  clusterPolicy:
+    type: CLUSTER_TYPE_UNSPECIFIED
+    appPolicyID: string
+    networkPolicyID: string
+    clusterConfig:
+      minNodesRequired: 0
+  edgeviewPolicy:
+    edgeviewcfg:
+      jwtInfo:
+        dispUrl: string
+        allowSec: 0
+        expireSec: string
+        numInst: 0
+        encrypt: true
+      token: string
+      devPolicy:
+        allowDev: true
+      appPolicy:
+        allowApp: true
+      extPolicy:
+        allowExt: true
+      generationId: 0
+    edgeviewAllow: true
+    accessAllowChange: true
+    maxExpireSec: 0
+    maxInst: 0
+  localOperatorConsolePolicy:
+    locURL: string
+  configurationLockPolicy:
+    configLock: CONFIGURATION_LOCK_UNSPECIFIED
+  statusMessage: string
+networkPolicy:
+  name: string
+  title: string
+  description: string
+  type: POLICY_TYPE_UNSPECIFIED
+  status: POLICY_STATUS_UNSPECIFIED
+  revision:
+    prev: string
+    curr: string
+    createdAt: {}
+    createdBy: string
+    updatedAt: {}
+    updatedBy: string
+  attr:
+    additionalProp1: string
+    additionalProp2: string
+    additionalProp3: string
+  appPolicy:
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  azurePolicy:
+    appId: string
+    appPassword: string
+    tenantId: string
+    encryptedSecrets:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    cryptoKey: string
+    azureResourceAndServices:
+      resourceGroup:
+      - name: string
+        region: string
+        subscriptionId: string
+      iotHubService:
+      - serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+      dpsService:
+        serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+        enrollment:
+          attachedIotHubsName:
+          - string
+          enableIotEdgeDevice: true
+          mechanism: ENROLLMENT_MECHANISM_UNSPECIFIED
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+          allocationPolicy: ALLOCATION_POLICY_UNSPECIFIED
+          symmetricKeyEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualSymmetricKeyEnrollment:
+              registrationId: string
+            groupSymmetricKeyEnrollment:
+              groupName: string
+          certificateEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualCertificateEnrollment: {}
+            groupCertificateEnrollment:
+              groupName: string
+          tpmEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+    customDeploymentManaged: true
+    certificate:
+      cert: string
+      pvtKey: string
+      publicKey: string
+      passPhrase: string
+      exportable: true
+      reuseKey: true
+      encryptedSecrets:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      cryptoKey: string
+      publicKeyAlgorithm: string
+      rsaEcryption:
+        rsaBits: string
+      ecdsaEncryption:
+        curve: string
+      validFrom: '2024-01-17T09:51:51.412Z'
+      validTill: '2024-01-17T09:51:51.413Z'
+      sanValues:
+        hosts:
+        - string
+        emaildIds:
+        - string
+        uris:
+        - string
+        ips:
+        - string
+        dns:
+        - string
+        upns:
+        - string
+      subject:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      issuer:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      serialNumber: string
+      basicContraintsValid: true
+      keyUsage: 0
+      extendedKeyUsage:
+      - string
+      signatureAlgorithm: string
+  modulePolicy:
+    labels:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    priority: 0
+    targetCondition: string
+    metrics:
+      queries:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      results:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+    Etag: string
+    routes:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    targetConditionNew:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    azureEdgeAgent:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    azureEdgeHub:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  attestationPolicy:
+    type: ATTEST_POLICY_TYPE_UNSPECIFIED
+  networkPolicy:
+    netInstanceConfig:
+    - name: string
+      title: string
+      description: string
+      revision:
+        prev: string
+        curr: string
+        createdAt: {}
+        createdBy: string
+        updatedAt: {}
+        updatedBy: string
+      projectId: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      clusterID: string
+      deviceId: string
+      port: string
+      portTags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      kind: NETWORK_INSTANCE_KIND_UNSPECIFIED
+      dhcp: true
+      type: NETWORK_INSTANCE_DHCP_TYPE_UNSPECIFIED
+      ip:
+        subnet: string
+        mask: string
+        gateway: string
+        domain: string
+        ntp: string
+        dns:
+        - string
+        dhcpRange:
+          start: string
+          end: string
+      dnsList:
+      - hostname: string
+        addrs:
+        - string
+      oconfig: string
+      lisp:
+        lispiid: 0
+        allocate: true
+        exportprivate: true
+        allocationprefix: string
+        allocationprefixlen: 0
+        sp:
+        - type: SPTYPE_INVALIDSRV
+          NameOrIp: string
+          Credential: string
+      opaque:
+        type: OPAQUE_CONFIG_TYPE_UNSPECIFIED
+        oconfig: string
+        lisp:
+          lispiid: 0
+          allocate: true
+          exportprivate: true
+          allocationprefix: string
+          allocationprefixlen: 0
+          sp:
+          - type: SPTYPE_INVALIDSRV
+            NameOrIp: string
+            Credential: string
+      deviceDefault: true
+      networkPolicyId: string
+  clusterPolicy:
+    type: CLUSTER_TYPE_UNSPECIFIED
+    appPolicyID: string
+    networkPolicyID: string
+    clusterConfig:
+      minNodesRequired: 0
+  edgeviewPolicy:
+    edgeviewcfg:
+      jwtInfo:
+        dispUrl: string
+        allowSec: 0
+        expireSec: string
+        numInst: 0
+        encrypt: true
+      token: string
+      devPolicy:
+        allowDev: true
+      appPolicy:
+        allowApp: true
+      extPolicy:
+        allowExt: true
+      generationId: 0
+    edgeviewAllow: true
+    accessAllowChange: true
+    maxExpireSec: 0
+    maxInst: 0
+  localOperatorConsolePolicy:
+    locURL: string
+  configurationLockPolicy:
+    configLock: CONFIGURATION_LOCK_UNSPECIFIED
+  statusMessage: string
+deployment:
+  id: string
+  name: string
+  title: string
+  appInstPolicies:
+  - metaData:
+      id: string
+      name: string
+      title: string
+      revision:
+        prev: string
+        curr: string
+        createdAt: {}
+        createdBy: string
+        updatedAt: {}
+        updatedBy: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      policyTargetCondition:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+    appInstConfig:
+      name: sample-app
+      title: Sample Edge Applications
+      originType: ORIGIN_LOCAL
+  networkInstPolicies:
+  - metaData:
+      id: string
+      name: string
+      title: string
+      revision:
+        prev: string
+        curr: string
+        createdAt: {}
+        createdBy: string
+        updatedAt: {}
+        updatedBy: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      policyTargetCondition:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+    netInstConfig:
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      port: string
+      portTags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      kind: NETWORK_INSTANCE_KIND_UNSPECIFIED
+      type: NETWORK_INSTANCE_DHCP_TYPE_UNSPECIFIED
+      ip:
+        subnet: string
+        mask: string
+        gateway: string
+        domain: string
+        ntp: string
+        dns:
+        - string
+        dhcpRange:
+          start: string
+          end: string
+      dnsList:
+      - hostname: string
+        addrs:
+        - string
+      opaque:
+        type: OPAQUE_CONFIG_TYPE_UNSPECIFIED
+        oconfig: string
+        lisp:
+          lispiid: 0
+          allocate: true
+          exportprivate: true
+          allocationprefix: string
+          allocationprefixlen: 0
+          sp:
+          - type: SPTYPE_INVALIDSRV
+            NameOrIp: string
+            Credential: string
+      deviceDefault: true
+  volumeInstPolicies:
+  - metaData:
+      id: string
+      name: string
+      title: string
+      revision:
+        prev: string
+        curr: string
+        createdAt: {}
+        createdBy: string
+        updatedAt: {}
+        updatedBy: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      policyTargetCondition:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+    volInstConfig:
+      type: VOLUME_INSTANCE_TYPE_UNSPECIFIED
+      multiattach: true
+      cleartext: true
+      accessmode: VOLUME_INSTANCE_ACCESS_MODE_INVALID
+      sizeBytes: 0
+      image: string
+      contentTreeId: string
+      label: string
+      purge:
+        counter: 0
+        opsTime: {}
+      contentTreeTargetCondition:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      blockStorageTags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+  devicePolicies:
+  - metaData:
+      id: string
+      name: string
+      title: string
+      revision:
+        prev: string
+        curr: string
+        createdAt: {}
+        createdBy: string
+        updatedAt: {}
+        updatedBy: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      policyTargetCondition:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+    policySubType: DEVICE_POLICY_TYPE_UNSPECIFIED
+    attestationPolicy:
+      type: DEVICE_ATTEST_POLICY_TYPE_UNSPECIFIED
+  integrationPolicy:
+    Id: string
+    Name: string
+    title: string
+    revision:
+      prev: string
+      curr: string
+      createdAt: {}
+      createdBy: string
+      updatedAt: {}
+      updatedBy: string
+  clusterPolicy:
+    Id: string
+    Name: string
+    title: string
+    revision:
+      prev: string
+      curr: string
+      createdAt: {}
+      createdBy: string
+      updatedAt: {}
+      updatedBy: string
+  revision:
+    prev: string
+    curr: string
+    createdAt: {}
+    createdBy: string
+    updatedAt: {}
+    updatedBy: string
+  deploymentTag: string
+  projectId: string
+edgeviewPolicy:
+  name: string
+  title: string
+  description: string
+  type: POLICY_TYPE_UNSPECIFIED
+  status: POLICY_STATUS_UNSPECIFIED
+  revision:
+    prev: string
+    curr: string
+    createdAt: {}
+    createdBy: string
+    updatedAt: {}
+    updatedBy: string
+  attr:
+    additionalProp1: string
+    additionalProp2: string
+    additionalProp3: string
+  appPolicy:
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  azurePolicy:
+    appId: string
+    appPassword: string
+    tenantId: string
+    encryptedSecrets:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    cryptoKey: string
+    azureResourceAndServices:
+      resourceGroup:
+      - name: string
+        region: string
+        subscriptionId: string
+      iotHubService:
+      - serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+      dpsService:
+        serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+        enrollment:
+          attachedIotHubsName:
+          - string
+          enableIotEdgeDevice: true
+          mechanism: ENROLLMENT_MECHANISM_UNSPECIFIED
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+          allocationPolicy: ALLOCATION_POLICY_UNSPECIFIED
+          symmetricKeyEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualSymmetricKeyEnrollment:
+              registrationId: string
+            groupSymmetricKeyEnrollment:
+              groupName: string
+          certificateEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualCertificateEnrollment: {}
+            groupCertificateEnrollment:
+              groupName: string
+          tpmEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+    customDeploymentManaged: true
+    certificate:
+      cert: string
+      pvtKey: string
+      publicKey: string
+      passPhrase: string
+      exportable: true
+      reuseKey: true
+      encryptedSecrets:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      cryptoKey: string
+      publicKeyAlgorithm: string
+      rsaEcryption:
+        rsaBits: string
+      ecdsaEncryption:
+        curve: string
+      validFrom: '2024-01-17T09:51:51.414Z'
+      validTill: '2024-01-17T09:51:51.414Z'
+      sanValues:
+        hosts:
+        - string
+        emaildIds:
+        - string
+        uris:
+        - string
+        ips:
+        - string
+        dns:
+        - string
+        upns:
+        - string
+      subject:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      issuer:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      serialNumber: string
+      basicContraintsValid: true
+      keyUsage: 0
+      extendedKeyUsage:
+      - string
+      signatureAlgorithm: string
+  modulePolicy:
+    labels:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    priority: 0
+    targetCondition: string
+    metrics:
+      queries:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      results:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+    Etag: string
+    routes:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    targetConditionNew:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    azureEdgeAgent:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    azureEdgeHub:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  attestationPolicy:
+    type: ATTEST_POLICY_TYPE_UNSPECIFIED
+  networkPolicy:
+    netInstanceConfig:
+    - name: string
+      title: string
+      description: string
+      revision:
+        prev: string
+        curr: string
+        createdAt: {}
+        createdBy: string
+        updatedAt: {}
+        updatedBy: string
+      projectId: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      clusterID: string
+      deviceId: string
+      port: string
+      portTags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      kind: NETWORK_INSTANCE_KIND_UNSPECIFIED
+      dhcp: true
+      type: NETWORK_INSTANCE_DHCP_TYPE_UNSPECIFIED
+      ip:
+        subnet: string
+        mask: string
+        gateway: string
+        domain: string
+        ntp: string
+        dns:
+        - string
+        dhcpRange:
+          start: string
+          end: string
+      dnsList:
+      - hostname: string
+        addrs:
+        - string
+      oconfig: string
+      lisp:
+        lispiid: 0
+        allocate: true
+        exportprivate: true
+        allocationprefix: string
+        allocationprefixlen: 0
+        sp:
+        - type: SPTYPE_INVALIDSRV
+          NameOrIp: string
+          Credential: string
+      opaque:
+        type: OPAQUE_CONFIG_TYPE_UNSPECIFIED
+        oconfig: string
+        lisp:
+          lispiid: 0
+          allocate: true
+          exportprivate: true
+          allocationprefix: string
+          allocationprefixlen: 0
+          sp:
+          - type: SPTYPE_INVALIDSRV
+            NameOrIp: string
+            Credential: string
+      deviceDefault: true
+      networkPolicyId: string
+  clusterPolicy:
+    type: CLUSTER_TYPE_UNSPECIFIED
+    appPolicyID: string
+    networkPolicyID: string
+    clusterConfig:
+      minNodesRequired: 0
+  edgeviewPolicy:
+    edgeviewcfg:
+      jwtInfo:
+        dispUrl: string
+        allowSec: 0
+        expireSec: string
+        numInst: 0
+        encrypt: true
+      token: string
+      devPolicy:
+        allowDev: true
+      appPolicy:
+        allowApp: true
+      extPolicy:
+        allowExt: true
+      generationId: 0
+    edgeviewAllow: true
+    accessAllowChange: true
+    maxExpireSec: 0
+    maxInst: 0
+  localOperatorConsolePolicy:
+    locURL: string
+  configurationLockPolicy:
+    configLock: CONFIGURATION_LOCK_UNSPECIFIED
+  statusMessage: string
+localOperatorConsolePolicy:
+  name: string
+  title: string
+  description: string
+  type: POLICY_TYPE_UNSPECIFIED
+  status: POLICY_STATUS_UNSPECIFIED
+  revision:
+    prev: string
+    curr: string
+    createdAt: {}
+    createdBy: string
+    updatedAt: {}
+    updatedBy: string
+  attr:
+    additionalProp1: string
+    additionalProp2: string
+    additionalProp3: string
+  appPolicy:
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  azurePolicy:
+    appId: string
+    appPassword: string
+    tenantId: string
+    encryptedSecrets:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    cryptoKey: string
+    azureResourceAndServices:
+      resourceGroup:
+      - name: string
+        region: string
+        subscriptionId: string
+      iotHubService:
+      - serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+      dpsService:
+        serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+        enrollment:
+          attachedIotHubsName:
+          - string
+          enableIotEdgeDevice: true
+          mechanism: ENROLLMENT_MECHANISM_UNSPECIFIED
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+          allocationPolicy: ALLOCATION_POLICY_UNSPECIFIED
+          symmetricKeyEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualSymmetricKeyEnrollment:
+              registrationId: string
+            groupSymmetricKeyEnrollment:
+              groupName: string
+          certificateEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualCertificateEnrollment: {}
+            groupCertificateEnrollment:
+              groupName: string
+          tpmEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+    customDeploymentManaged: true
+    certificate:
+      cert: string
+      pvtKey: string
+      publicKey: string
+      passPhrase: string
+      exportable: true
+      reuseKey: true
+      encryptedSecrets:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      cryptoKey: string
+      publicKeyAlgorithm: string
+      rsaEcryption:
+        rsaBits: string
+      ecdsaEncryption:
+        curve: string
+      validFrom: '2024-01-17T09:51:51.416Z'
+      validTill: '2024-01-17T09:51:51.416Z'
+      sanValues:
+        hosts:
+        - string
+        emaildIds:
+        - string
+        uris:
+        - string
+        ips:
+        - string
+        dns:
+        - string
+        upns:
+        - string
+      subject:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      issuer:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      serialNumber: string
+      basicContraintsValid: true
+      keyUsage: 0
+      extendedKeyUsage:
+      - string
+      signatureAlgorithm: string
+  modulePolicy:
+    labels:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    priority: 0
+    targetCondition: string
+    metrics:
+      queries:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      results:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+    Etag: string
+    routes:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    targetConditionNew:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    azureEdgeAgent:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    azureEdgeHub:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  attestationPolicy:
+    type: ATTEST_POLICY_TYPE_UNSPECIFIED
+  networkPolicy:
+    netInstanceConfig:
+    - name: string
+      title: string
+      description: string
+      revision:
+        prev: string
+        curr: string
+        createdAt: {}
+        createdBy: string
+        updatedAt: {}
+        updatedBy: string
+      projectId: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      clusterID: string
+      deviceId: string
+      port: string
+      portTags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      kind: NETWORK_INSTANCE_KIND_UNSPECIFIED
+      dhcp: true
+      type: NETWORK_INSTANCE_DHCP_TYPE_UNSPECIFIED
+      ip:
+        subnet: string
+        mask: string
+        gateway: string
+        domain: string
+        ntp: string
+        dns:
+        - string
+        dhcpRange:
+          start: string
+          end: string
+      dnsList:
+      - hostname: string
+        addrs:
+        - string
+      oconfig: string
+      lisp:
+        lispiid: 0
+        allocate: true
+        exportprivate: true
+        allocationprefix: string
+        allocationprefixlen: 0
+        sp:
+        - type: SPTYPE_INVALIDSRV
+          NameOrIp: string
+          Credential: string
+      opaque:
+        type: OPAQUE_CONFIG_TYPE_UNSPECIFIED
+        oconfig: string
+        lisp:
+          lispiid: 0
+          allocate: true
+          exportprivate: true
+          allocationprefix: string
+          allocationprefixlen: 0
+          sp:
+          - type: SPTYPE_INVALIDSRV
+            NameOrIp: string
+            Credential: string
+      deviceDefault: true
+      networkPolicyId: string
+  clusterPolicy:
+    type: CLUSTER_TYPE_UNSPECIFIED
+    appPolicyID: string
+    networkPolicyID: string
+    clusterConfig:
+      minNodesRequired: 0
+  edgeviewPolicy:
+    edgeviewcfg:
+      jwtInfo:
+        dispUrl: string
+        allowSec: 0
+        expireSec: string
+        numInst: 0
+        encrypt: true
+      token: string
+      devPolicy:
+        allowDev: true
+      appPolicy:
+        allowApp: true
+      extPolicy:
+        allowExt: true
+      generationId: 0
+    edgeviewAllow: true
+    accessAllowChange: true
+    maxExpireSec: 0
+    maxInst: 0
+  localOperatorConsolePolicy:
+    locURL: string
+  configurationLockPolicy:
+    configLock: CONFIGURATION_LOCK_UNSPECIFIED
+  statusMessage: string
+tags:
+  additionalProp1: string
+  additionalProp2: string
+  additionalProp3: string
+configurationLockPolicy:
+  name: string
+  title: string
+  description: string
+  type: POLICY_TYPE_UNSPECIFIED
+  status: POLICY_STATUS_UNSPECIFIED
+  revision:
+    prev: string
+    curr: string
+    createdAt: {}
+    createdBy: string
+    updatedAt: {}
+    updatedBy: string
+  attr:
+    additionalProp1: string
+    additionalProp2: string
+    additionalProp3: string
+  appPolicy:
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  azurePolicy:
+    appId: string
+    appPassword: string
+    tenantId: string
+    encryptedSecrets:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    cryptoKey: string
+    azureResourceAndServices:
+      resourceGroup:
+      - name: string
+        region: string
+        subscriptionId: string
+      iotHubService:
+      - serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+      dpsService:
+        serviceDetail:
+          name: string
+          createByDefault: true
+          region: string
+          SKU:
+            name: string
+            tier: string
+            capacity: string
+          subscriptionId: string
+          resourceGroupName: string
+        enrollment:
+          attachedIotHubsName:
+          - string
+          enableIotEdgeDevice: true
+          mechanism: ENROLLMENT_MECHANISM_UNSPECIFIED
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+          allocationPolicy: ALLOCATION_POLICY_UNSPECIFIED
+          symmetricKeyEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualSymmetricKeyEnrollment:
+              registrationId: string
+            groupSymmetricKeyEnrollment:
+              groupName: string
+          certificateEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+            individualCertificateEnrollment: {}
+            groupCertificateEnrollment:
+              groupName: string
+          tpmEnrollment:
+            type: ENROLLMENT_TYPE_UNSPECIFIED
+    customDeploymentManaged: true
+    certificate:
+      cert: string
+      pvtKey: string
+      publicKey: string
+      passPhrase: string
+      exportable: true
+      reuseKey: true
+      encryptedSecrets:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      cryptoKey: string
+      publicKeyAlgorithm: string
+      rsaEcryption:
+        rsaBits: string
+      ecdsaEncryption:
+        curve: string
+      validFrom: '2024-01-17T09:51:51.417Z'
+      validTill: '2024-01-17T09:51:51.417Z'
+      sanValues:
+        hosts:
+        - string
+        emaildIds:
+        - string
+        uris:
+        - string
+        ips:
+        - string
+        dns:
+        - string
+        upns:
+        - string
+      subject:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      issuer:
+        commonName: string
+        country:
+        - string
+        organization:
+        - string
+        organizationalUnit:
+        - string
+        locality:
+        - string
+        postalCode:
+        - string
+        province:
+        - string
+        serialNumber: string
+      serialNumber: string
+      basicContraintsValid: true
+      keyUsage: 0
+      extendedKeyUsage:
+      - string
+      signatureAlgorithm: string
+  modulePolicy:
+    labels:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    priority: 0
+    targetCondition: string
+    metrics:
+      queries:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      results:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+    Etag: string
+    routes:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    apps:
+    - name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    targetConditionNew:
+      additionalProp1: string
+      additionalProp2: string
+      additionalProp3: string
+    azureEdgeAgent:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+    azureEdgeHub:
+      name: string
+      title: string
+      description: string
+      appId: string
+      networks: 0
+      cpus: 0
+      memory: 0
+      manifestJSON:
+        acKind: VMManifest
+        acVersion: 1.2.0
+        name: string
+        displayName: string
+        description: string
+        owner:
+          user: string
+          group: string
+          company: string
+          website: string
+          email: string
+        desc:
+          appCategory: APP_CATEGORY_CLOUD_APPLICATION
+          os: Linux
+        images:
+        - imagename: string
+          imageid: string
+          imageformat: FmtUnknown
+          maxsize: string
+          preserve: true
+          target: string
+          drvtype: string
+          params:
+          - name: string
+            value: string
+          readonly: true
+          volumelabel: string
+          ignorepurge: true
+          cleartext: true
+          mountpath: string
+        interfaces:
+        - name: string
+          type: string
+          optional: true
+          directattach: true
+          privateip: true
+          acls:
+          - matches:
+            - type: string
+              value: string
+            actions:
+            - drop: true
+              limit: true
+              limitValue:
+                limitrate: 0
+                limitunit: string
+                limitburst: 0
+              limitrate: 0
+              limitunit: string
+              limitburst: 0
+              portmap: true
+              portmapto:
+                appPort: 0
+            name: string
+        permissions:
+        - {}
+        vmmode: HV_HVM
+        enablevnc: true
+        resources:
+        - name: string
+          value: string
+        configuration:
+          customConfig:
+            name: string
+            add: true
+            override: true
+            allowStorageResize: true
+            fieldDelimiter: string
+            template: string
+            variableGroups:
+            - name: string
+              variables:
+              - format: VARIABLE_FORMAT_TEXT
+                name: username
+                label: Enter User Name
+                required: 'True'
+              required: true
+              condition:
+                name: string
+                value: string
+                operator: CONDITION_OPERATOR_UNSPECIFIED
+        containerDetail:
+          containerCreateOption: string
+        module:
+          twinDetail: IHsKICAgICAgIm5hbWUiOiAiU2VuZEludGVydmFsIiwKICAgICAgInZhbHVlIjogIjUiCiAgICB9
+        appType: APP_TYPE_UNSPECIFIED
+        deploymentType: DEPLOYMENT_TYPE_UNSPECIFIED
+        cpuPinningEnabled: true
+      parentDetail:
+        updateAvailable: true
+        referenceExists: true
+      originType: ORIGIN_UNSPECIFIED
+      appVersion: string
+      nameProjectPart: string
+      nameAppPart: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      namingScheme: APP_NAMING_SCHEME_UNSPECIFIED
+      interfaces:
+      - netname: string
+        io:
+          type: IO_TYPE_UNSPECIFIED
+          name: string
+          tags:
+            additionalProp1: string
+            additionalProp2: string
+            additionalProp3: string
+        intforder: 0
+        intfname: string
+        directattach: true
+        privateip: string
+        acls:
+        - matches:
+          - type: string
+            value: string
+          actions:
+          - drop: true
+            limit: true
+            limitrate: 0
+            limitunit: string
+            limitburst: 0
+            portmap: true
+            mapparams:
+              port: 0
+          id: 0
+          name: string
+        ipaddr: string
+        macaddr: string
+        accessVlanId: 4093
+        eidregister:
+          AppCert: string
+          AppPublicKey: string
+          AppPrivateKey: string
+          UUID: string
+          DisplayName: string
+          LispInstance: 0
+          EID: string
+          EIDHashLen: 0
+          LispSignature: string
+          LispMapServers:
+          - nameOrIp: string
+            credential: string
+        netinstname: string
+        netinsttag:
+          additionalProp1: string
+          additionalProp2: string
+          additionalProp3: string
+        netinstid: string
+        defaultNetInstance: true
+      storage: 0
+      startDelayInSeconds: 0
+  attestationPolicy:
+    type: ATTEST_POLICY_TYPE_UNSPECIFIED
+  networkPolicy:
+    netInstanceConfig:
+    - name: string
+      title: string
+      description: string
+      revision:
+        prev: string
+        curr: string
+        createdAt: {}
+        createdBy: string
+        updatedAt: {}
+        updatedBy: string
+      projectId: string
+      tags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      clusterID: string
+      deviceId: string
+      port: string
+      portTags:
+        additionalProp1: string
+        additionalProp2: string
+        additionalProp3: string
+      kind: NETWORK_INSTANCE_KIND_UNSPECIFIED
+      dhcp: true
+      type: NETWORK_INSTANCE_DHCP_TYPE_UNSPECIFIED
+      ip:
+        subnet: string
+        mask: string
+        gateway: string
+        domain: string
+        ntp: string
+        dns:
+        - string
+        dhcpRange:
+          start: string
+          end: string
+      dnsList:
+      - hostname: string
+        addrs:
+        - string
+      oconfig: string
+      lisp:
+        lispiid: 0
+        allocate: true
+        exportprivate: true
+        allocationprefix: string
+        allocationprefixlen: 0
+        sp:
+        - type: SPTYPE_INVALIDSRV
+          NameOrIp: string
+          Credential: string
+      opaque:
+        type: OPAQUE_CONFIG_TYPE_UNSPECIFIED
+        oconfig: string
+        lisp:
+          lispiid: 0
+          allocate: true
+          exportprivate: true
+          allocationprefix: string
+          allocationprefixlen: 0
+          sp:
+          - type: SPTYPE_INVALIDSRV
+            NameOrIp: string
+            Credential: string
+      deviceDefault: true
+      networkPolicyId: string
+  clusterPolicy:
+    type: CLUSTER_TYPE_UNSPECIFIED
+    appPolicyID: string
+    networkPolicyID: string
+    clusterConfig:
+      minNodesRequired: 0
+  edgeviewPolicy:
+    edgeviewcfg:
+      jwtInfo:
+        dispUrl: string
+        allowSec: 0
+        expireSec: string
+        numInst: 0
+        encrypt: true
+      token: string
+      devPolicy:
+        allowDev: true
+      appPolicy:
+        allowApp: true
+      extPolicy:
+        allowExt: true
+      generationId: 0
+    edgeviewAllow: true
+    accessAllowChange: true
+    maxExpireSec: 0
+    maxInst: 0
+  localOperatorConsolePolicy:
+    locURL: string
+  configurationLockPolicy:
+    configLock: CONFIGURATION_LOCK_UNSPECIFIED
+  statusMessage: string

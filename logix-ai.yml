@@ -1,0 +1,20 @@
+kind: project-policy
+name: LogixAIProject
+title: LogixAIProject
+numdevices: !!int 0
+attestationPolicy:
+  name: LogixAIAttestationPolicy
+  title: LogixAIAttestationPolicy
+  type: POLICY_TYPE_ATTESTATION
+  status: POLICY_STATUS_READY
+  attestationPolicy:
+    type: ATTEST_POLICY_TYPE_ACCEPT
+  statusMessage: Policy configured successfully
+configurationLockPolicy:
+  name: LogixAIConfigurationLockPolicy
+  title: LogixAIConfigurationLockPolicy
+  type: POLICY_TYPE_CONFIGURATION_LOCK
+  status: POLICY_STATUS_READY
+  configurationLockPolicy:
+    configLock: CONFIGURATION_LOCK_DISABLED
+  statusMessage: Policy configured successfully

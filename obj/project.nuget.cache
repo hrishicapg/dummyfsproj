@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "9MyJqKCxxVjky5kmraOCGkS22C7/RA+kbDe3X3TAvExlB3Hc/9L111zc4Rrnr8UNqOuF20xLzYoLZd++Embm/w==",
+  "success": true,
+  "projectFilePath": "C:\\DummyFsProj\\src\\src.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hrishi\\.nuget\\packages\\fsharp.configuration\\2.0.0\\fsharp.configuration.2.0.0.nupkg.sha512",
+    "C:\\Users\\hrishi\\.nuget\\packages\\fsharp.core\\6.0.2\\fsharp.core.6.0.2.nupkg.sha512",
+    "C:\\Users\\hrishi\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\hrishi\\.nuget\\packages\\yamldotnet\\15.1.0\\yamldotnet.15.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,43 @@
+---
+kind: project-policy
+name: Default
+title: Default
+type: TAG_TYPE_PROJECT
+attestationPolicy:
+  name: DefaultAttestationPolicy
+  title: DefaultAttestationPolicy
+  type: POLICY_TYPE_ATTESTATION
+  attestationPolicy:
+    type: ATTEST_POLICY_TYPE_ACCEPT
+networkPolicy:
+  name: DefaultNetworkPolicy
+  title: DefaultNetworkPolicy
+  type: POLICY_TYPE_NETWORK
+  networkPolicy:
+    netInstanceConfig:
+    - name: PolicyNetworkInstanceLocal
+      title: PolicyNetworkInstanceLocal
+      tags:
+        PolicyNetworkInstance: Local
+      port: uplink
+      kind: NETWORK_INSTANCE_KIND_LOCAL
+      type: NETWORK_INSTANCE_DHCP_TYPE_V4
+      deviceDefault: !!bool true
+edgeviewPolicy:
+  name: EdgeViewPolicy
+  title: EdgeViewPolicy
+  type: POLICY_TYPE_EDGEVIEW
+  edgeviewPolicy:
+    edgeviewcfg:
+      jwtInfo:
+        allowSec: 18000
+        numInst: 1
+        encrypt: !!bool false
+      devPolicy:
+        allowDev: !!bool true
+      appPolicy:
+        allowApp: !!bool true
+    edgeviewAllow: false
+    accessAllowChange: !!bool true
+    maxExpireSec: 604800
+    maxInst: 3
