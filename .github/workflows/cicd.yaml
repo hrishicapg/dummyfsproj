@@ -16,15 +16,56 @@ env:
   HELM_TIMEOUT: 600s
 
 jobs:
+  config:
+    if: | 
+      (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]') ||
+      (github.event_name == 'push' && github.actor != 'dependabot[bot]')
+    runs-on:
+      - self-hosted
+    outputs:
+      deployment_environment: ${{ env.DEPLOYMENT_ENVIRONMENT }}
+      release_suffix: ${{ env.RELEASE_SUFFIX }}
+      kubernetes_app_name: ${{ env.KUBERNETES_APP_NAME }}
+      terraform_location: ${{ env.TERRAFORM_TEMPLATES_RELATIVE_LOCATION }}
+    steps:
+      - name: Set Sandbox values
+        if: github.ref == 'refs/heads/develop'
+        run: |
+          echo "DEPLOYMENT_ENVIRONMENT=sandbox" >> $GITHUB_ENV
+          echo "RELEASE_SUFFIX=development" >> $GITHUB_ENV
+
+      - name: Set Non-Prod values
+        if: startsWith(github.ref, 'refs/heads/hotfix/') ||
+            startsWith(github.ref, 'refs/heads/release')
+        run: |
+          echo "DEPLOYMENT_ENVIRONMENT=nonprod" >> $GITHUB_ENV
+          echo "RELEASE_SUFFIX=prerelease" >> $GITHUB_ENV
+
+      - name: Set Production values
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "DEPLOYMENT_ENVIRONMENT=production" >> $GITHUB_ENV
+          echo "RELEASE_SUFFIX=release" >> $GITHUB_ENV
+
+      - name: Set Demo values
+        if: github.ref == 'refs/heads/demo'
+        run: |
+          echo "DEPLOYMENT_ENVIRONMENT=demo" >> $GITHUB_ENV
+          echo "RELEASE_SUFFIX=demo" >> $GITHUB_ENV
+
+      - name: Set generic values
+        run: |
+          echo "KUBERNETES_APP_NAME=${{ env.KUBERNETES_APP_NAME }}" >> $GITHUB_ENV
+
   build:
+    needs: [config]
+    if: |
+      (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]') ||
+      (github.event_name == 'push' && github.actor != 'dependabot[bot]')
     # needs: [lint]
     timeout-minutes: 20
     runs-on:
       - self-hosted
-    outputs:
-      build_version: ${{ env.BUILD_VERSION }}
-    concurrency:
-      group: build-${{ needs.config.outputs.deployment_environment || github.sha }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -36,7 +77,6 @@ jobs:
       - name: Build the Docker image for sandbox
         if: github.ref != 'refs/heads/master' && github.ref != 'refs/heads/release'
         run: |
-          echo -n "${{ secrets.EDGE_MANAGER_CONFIG_READ_DEPLOY_KEY }}" > id_rsa
           docker build . --file ${{ env.DOCKER_FILE }} --tag buildimage
         # Add these steps back when we are capturing unit tests and code coverage
         # docker run --name test_container buildimage echo test
@@ -59,11 +99,3 @@ jobs:
         # Add these steps back when we are capturing unit tests and code coverage
         # docker run --name test_container buildimage echo test
         # docker cp test_container:/usr/src/app/angular-app/test ./test
-
-      # If the branch has an environment, then we're creating a release...
-      - uses: ./.github/actions/common-outputs
-        if: github.ref == 'refs/heads/main' ||
-              startsWith(github.ref, 'refs/heads/hotfix/') ||
-              startsWith(github.ref, 'refs/heads/release') ||
-              github.ref == 'refs/heads/develop'
-        id: common
