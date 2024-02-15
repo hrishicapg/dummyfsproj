@@ -79,4 +79,8 @@ jobs:
 
       - name: Run the Docker container
         run: |
-          docker run -it --name cont -d buildimage
+          docker run -it --name cont -d buildimage'
+
+      - name: Check logs
+        run: |
+          docker logs cont
