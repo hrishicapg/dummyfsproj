@@ -19,7 +19,7 @@ env:
 jobs:
   config:
     runs-on:
-      - ubuntu
+      - ubuntu-latest
     outputs:
       deployment_environment: ${{ env.DEPLOYMENT_ENVIRONMENT }}
       release_suffix: ${{ env.RELEASE_SUFFIX }}
@@ -60,7 +60,7 @@ jobs:
     # needs: [lint]
     timeout-minutes: 20
     runs-on:
-      - ubuntu
+      - ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
