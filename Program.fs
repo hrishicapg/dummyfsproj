@@ -7,6 +7,7 @@ open YamlDotNet.Serialization
 open YamlDotNet.Serialization.NamingConventions
 open Newtonsoft.Json
 open Newtonsoft.Json.Linq
+open Serilog
 
 
 [<Literal>]
@@ -28,4 +29,6 @@ jsonObject.Property("kind").Remove()
 // printfn "%O\n\n%O" (Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)) (Environment.CurrentDirectory)
 // let jsonText = "{"+w.ToString().Substring(25);
 
-printfn "%O\n\n\n%O" (yamlObject.GetType()) (jsonObject)
+
+// Log.Logger.Information("File path: {jsonObject}", jsonObject)
+Log.Logger.Information("Data: {jsonObject}", jsonObject)
