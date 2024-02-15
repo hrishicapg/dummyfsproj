@@ -83,4 +83,4 @@ jobs:
 
       - name: Check logs
         run: |
-          docker logs cont
+          docker logs cont > cat
