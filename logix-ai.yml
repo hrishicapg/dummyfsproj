@@ -1,7 +1,7 @@
 kind: project-policy
 name: LogixAIProject
 title: LogixAIProject
-numdevices: !!int 0
+numdevices: 0
 attestationPolicy:
   name: LogixAIAttestationPolicy
   title: LogixAIAttestationPolicy
