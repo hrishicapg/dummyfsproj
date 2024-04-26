@@ -1,7 +1,8 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /app
 
-RUN apt-get update && apt-get -y install cron
+RUN gpupdate /force
+RUN sudo apt-get update && apt-get -y install cron
 
 # Copy everything
 COPY . ./
