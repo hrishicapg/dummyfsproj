@@ -22,7 +22,7 @@ networkPolicy:
       port: uplink
       kind: NETWORK_INSTANCE_KIND_LOCAL
       type: NETWORK_INSTANCE_DHCP_TYPE_V4
-      deviceDefault: true
+      deviceDefault: !!bool true
 edgeviewPolicy:
   name: EdgeViewPolicy
   title: EdgeViewPolicy
@@ -32,12 +32,12 @@ edgeviewPolicy:
       jwtInfo:
         allowSec: 18000
         numInst: 1
-        encrypt: false
+        encrypt: !!bool false
       devPolicy:
-        allowDev: true
+        allowDev: !!bool true
       appPolicy:
-        allowApp: true
-    edgeviewAllow: false
-    accessAllowChange: true
+        allowApp: !!bool true
+    edgeviewAllow: !!bool false
+    accessAllowChange: !!bool true
     maxExpireSec: 604800
     maxInst: 3
